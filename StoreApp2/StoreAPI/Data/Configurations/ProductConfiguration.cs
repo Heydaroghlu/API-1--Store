@@ -14,6 +14,7 @@ namespace StoreAPI.Data.Configurations
         {
             builder.Property(x => x.Name).IsRequired(true).HasMaxLength(150);
             builder.Property(x => x.Price).IsRequired(true).HasColumnType("decimal(18,2)");
+            builder.HasOne(x => x.Category).WithMany(x => x.Products).OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

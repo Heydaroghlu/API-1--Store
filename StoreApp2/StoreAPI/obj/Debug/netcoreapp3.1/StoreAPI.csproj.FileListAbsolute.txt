@@ -60,3 +60,7 @@ C:\Users\heyde\source\repos\StoreApp2\StoreAPI\bin\Debug\netcoreapp3.1\runtimes\
 C:\Users\heyde\source\repos\StoreApp2\StoreAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\heyde\source\repos\StoreApp2\StoreAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\heyde\source\repos\StoreApp2\StoreAPI\obj\Debug\netcoreapp3.1\StoreAPI.csproj.CopyComplete
+C:\Users\heyde\source\repos\StoreApp2\StoreAPI\bin\Debug\netcoreapp3.1\FluentValidation.dll
+C:\Users\heyde\source\repos\StoreApp2\StoreAPI\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
+C:\Users\heyde\source\repos\StoreApp2\StoreAPI\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\heyde\source\repos\StoreApp2\StoreAPI\obj\Debug\netcoreapp3.1\StoreAPI.MvcApplicationPartsAssemblyInfo.cs

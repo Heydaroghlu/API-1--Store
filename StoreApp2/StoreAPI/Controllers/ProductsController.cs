@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using StoreAPI.Data.DAL;
 using StoreAPI.Data.Entites;
+using StoreAPI.DTOs.ProductDTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,8 +36,13 @@ namespace StoreAPI.Controllers
             return StatusCode(200, product);
         }
         [HttpPost]
-        public IActionResult Create([FromForm]Product product)
+        public IActionResult Create([FromForm]ProductPostDTO productDTO)
         {
+            Product product = new Product
+            {
+                Name = productDTO.Name,
+                Price = productDTO.Price
+            };
             if(product.Id!=0)
             {
                 return BadRequest();
@@ -46,15 +52,16 @@ namespace StoreAPI.Controllers
             return StatusCode(201, _context.Products.ToList());
         }
         [HttpPut]
-        public IActionResult Update([FromForm]Product product)
+        [Route("{id}")]
+        public IActionResult Update([FromForm]ProductPostDTO productDTO,int id)
         {
-            Product old = _context.Products.FirstOrDefault(x => x.Id == product.Id);
+            Product old = _context.Products.FirstOrDefault(x => x.Id ==id);
             if(old==null)
             {
                 return StatusCode(404, new { message = "Bele bir mehsul yoxdur" });
             }
-            old.Name = product.Name;
-            old.Price = product.Price;
+            old.Name = productDTO.Name;
+            old.Price = productDTO.Price;
             _context.SaveChanges();
             return NoContent();
             
